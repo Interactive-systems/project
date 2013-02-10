@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="false"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/map_mode_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="5dip"
+        android:layout_weight="0"
+        android:onClick="mapModeButtonClicked"
+        android:paddingTop="10dip"
+        android:text="Map mode" />
+
+    <Button
+        android:id="@+id/draw_mode_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="5dip"
+        android:layout_weight="0"
+        android:onClick="drawModeButtonClicked"
+        android:paddingTop="10dip"
+        android:text="Draw mode" />
+
+    <Button
+        android:id="@+id/gallery_mode_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="5dip"
+        android:layout_weight="0"
+        android:onClick="galleryModeButtonClicked"
+        android:paddingTop="10dip"
+        android:text="Gallery mode" />
+    
+    
+</LinearLayout>
