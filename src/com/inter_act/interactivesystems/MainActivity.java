@@ -1,6 +1,7 @@
 package com.inter_act.interactivesystems;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,6 +38,13 @@ public class MainActivity extends Activity {
 	}
 	
 	public void cameraModeButtonClicked(View view) {
+		ProgressDialog pd = new ProgressDialog(this);
+		pd.setTitle("Downloading image");
+		pd.setCancelable(false);
+		pd.setCanceledOnTouchOutside(false);
+		pd.show();
+		DataHolder.getDataHolderObject().setProgressDialog(pd);
+		
 		Intent cameraMode = new Intent(this, CameraPreviewActivity.class);
 		cameraMode.putExtra("url", "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/PNG_transparency_demonstration_2.png/300px-PNG_transparency_demonstration_2.png");
 		cameraMode.putExtra("direction", "S");

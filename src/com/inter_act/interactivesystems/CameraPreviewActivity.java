@@ -43,14 +43,22 @@ public class CameraPreviewActivity extends Activity implements SensorEventListen
 
 			Log.d("jee", "loading ohi");
 
+			int sleepCounter = 0;
 			while (bmp == null) {
 				Log.d("test", "bmp == null, sleeping");
 				try {
 					Thread.sleep(3000);
+					sleepCounter = sleepCounter + 3000;
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
+
+				if (sleepCounter > 30000) { //over 30 seconds
+					break;
+				}
 			}
+
+			DataHolder.getDataHolderObject().getProgressDialog().dismiss();
 
 			if (bmp == null) {
 				Toast.makeText(this, "Unfortunately, something went wrong when trying to start the activity.\n" +

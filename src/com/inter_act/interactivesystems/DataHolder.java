@@ -1,6 +1,7 @@
 package com.inter_act.interactivesystems;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.location.Location;
 
@@ -11,6 +12,7 @@ public class DataHolder{
 	private Activity activity;
 	private Location mapLocation;
 	private Location currentBestLocation;
+	private ProgressDialog progressDialog;
 
 	//======== Singleton Code =====================
 	private DataHolder(){}
@@ -44,5 +46,13 @@ public class DataHolder{
 
 	public void setCurrentBestLocation(Location currentBestLocation) {
 		this.currentBestLocation = currentBestLocation;
+	}
+	
+	public ProgressDialog getProgressDialog() {
+		return progressDialog;
+	}
+	
+	public void setProgressDialog(ProgressDialog pd) {
+		this.progressDialog = pd;
 	}
 }
