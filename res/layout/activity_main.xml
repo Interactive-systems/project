@@ -43,6 +43,16 @@
         android:onClick="galleryModeButtonClicked"
         android:paddingTop="10dip"
         android:text="Gallery mode" />
-    
-    
+
+    <Button
+        android:id="@+id/camera_mode_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="5dip"
+        android:layout_weight="0"
+        android:onClick="cameraModeButtonClicked"
+        android:paddingTop="10dip"
+        android:text="Camera mode" />
+
 </LinearLayout>

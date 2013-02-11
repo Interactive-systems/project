@@ -35,6 +35,13 @@ public class MainActivity extends Activity {
 		//this.startActivity(galleryMode);
 		Log.d("test", "gallery mode button clicked");
 	}
+	
+	public void cameraModeButtonClicked(View view) {
+		Intent cameraMode = new Intent(this, CameraPreviewActivity.class);
+		cameraMode.putExtra("url", "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/PNG_transparency_demonstration_2.png/300px-PNG_transparency_demonstration_2.png");
+		cameraMode.putExtra("direction", "S");
+		this.startActivity(cameraMode);
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
