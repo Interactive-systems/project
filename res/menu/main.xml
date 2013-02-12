@@ -1,9 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_camera_mode"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/action_settings"/>
+        android:title="@string/action_camera_mode"/>
+    <item
+        android:id="@+id/action_draw_mode"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_draw_mode"/>
+    <item
+        android:id="@+id/action_gallery_mode"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_gallery_mode"/>
 
 </menu>
